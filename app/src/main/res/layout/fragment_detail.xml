@@ -95,8 +95,10 @@
 
                     <ImageView
                         android:id="@+id/help_button"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:contentDescription="help_to_show_details"
                         android:padding="16dp"
                         app:srcCompat="@drawable/ic_help_circle" />
 
