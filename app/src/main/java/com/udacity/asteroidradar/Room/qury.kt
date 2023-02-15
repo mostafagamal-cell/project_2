@@ -25,7 +25,7 @@ interface DataBaseDao {
     @Query("SELECT * FROM AsteroidTable WHERE closeApproachDate= :today")
     fun gettoday(today:String): LiveData<List<Asteroid>>
 
-    @Query("SELECT * FROM AsteroidTable WHERE closeApproachDate >= :today")
+    @Query("SELECT * FROM AsteroidTable WHERE closeApproachDate >= :today ORDER BY closeApproachDate")
     fun getweek(today:String): LiveData<List<Asteroid>>
 
     @Query("DELETE FROM AsteroidTable where closeApproachDate < :today")
