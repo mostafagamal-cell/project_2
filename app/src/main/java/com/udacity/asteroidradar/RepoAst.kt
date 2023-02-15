@@ -17,13 +17,13 @@ class RepoAst(private val dataBaseAsteroid: DataBaseAsteroid) {
     val formatter = SimpleDateFormat("yyyy-MM-dd")
     val clender = Calendar.getInstance()
     val now = formatter.format(clender.time)
-     fun getall():LiveData<List<Asteroid>> =dataBaseAsteroid.database.getAllAst()
 
-     fun GetWeek():LiveData<List<Asteroid>> = dataBaseAsteroid.database.getweek(now)
-    fun GetToday():LiveData<List<Asteroid>>
-    {
-        return dataBaseAsteroid.database.gettoday(now)
-    }
+
+
+    fun getall():LiveData<List<Asteroid>> =dataBaseAsteroid.database.getAllAst()
+    fun GetWeek():LiveData<List<Asteroid>> = dataBaseAsteroid.database.getweek(now)
+    fun GetToday():LiveData<List<Asteroid>> =dataBaseAsteroid.database.gettoday(now)
+
 
 
     suspend fun refresh() {

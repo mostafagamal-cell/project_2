@@ -27,10 +27,6 @@ class MainViewModel(val dataBaseAsteroid: DataBaseAsteroid): ViewModel() {
         }
     }
 
-
-
-
-
     val _li=MutableLiveData<Asteroid?>(null)
     val li: MutableLiveData<Asteroid?>
         get()=_li
@@ -54,6 +50,7 @@ class MainViewModel(val dataBaseAsteroid: DataBaseAsteroid): ViewModel() {
     {
         type.value=FilterType.SAVED
     }
+
     val type=MutableLiveData<FilterType>(FilterType.WEEK)
 
     val list: LiveData<List<Asteroid>> = Transformations.switchMap(type) { type ->
