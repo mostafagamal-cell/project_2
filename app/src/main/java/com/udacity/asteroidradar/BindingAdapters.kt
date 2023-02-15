@@ -11,10 +11,10 @@ import com.example.myapplication.R
 @BindingAdapter("statusIcon")
 fun bindAsteroidStatusImage(imageView: ImageView, isHazardous: Boolean) {
     if (isHazardous) {
-        imageView.contentDescription="is_potentially_hazardous"
+        imageView.contentDescription="potentially hazardous."
         imageView.setImageResource(R.drawable.ic_status_potentially_hazardous)
     } else {
-        imageView.contentDescription="is_not_safe"
+        imageView.contentDescription="asteroid is safe"
         imageView.setImageResource(R.drawable.ic_status_normal)
     }
 }

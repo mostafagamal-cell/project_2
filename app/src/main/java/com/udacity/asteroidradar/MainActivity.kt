@@ -35,11 +35,6 @@ class MainActivity : Application() {
             RefreshDataWorker.WORK_NAME,
             ExistingPeriodicWorkPolicy.KEEP,
             repeatingRequest)
-
-
-
-
-
     }
     private fun delayedInit() = applicationScope.launch {
         setwork()
